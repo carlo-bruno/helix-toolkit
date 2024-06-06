@@ -18,7 +18,7 @@ I want to create a web app of tools that will help me create and update my Helix
 
 ## TODOs:
 
-- [ ] Initial deploy, Vercel
+- [x] Initial deploy, Vercel
 - [ ] Design basic layout
 - [ ] Component: Toolkit Sidebar, toggle tools on off
 - [ ] State management
