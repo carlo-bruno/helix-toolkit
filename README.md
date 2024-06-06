@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Helix Toolkit
 
-## Getting Started
+## Motivation
 
-First, run the development server:
+I want to create a web app of tools that will help me create and update my Helix/HX Stomp patches
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Online Preset viewer
+  - Show what is in a preset without firing up HX Edit/Helix Native
+  - Show multiple patches at the same time
+- Blocks pastebin
+  - Have boxes where I can paste a block and all its settings so I can copy/paste different effects with ease
+- Preset Diff (highlight difference between 2 presets)
+  - Highlight difference between 2 presets
+- Tuner
+  - Always on Tuner, can be turned off or hidden
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## TODOs:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [ ] Initial deploy, Vercel
+- [ ] Design basic layout
+- [ ] Component: Toolkit Sidebar, toggle tools on off
+- [ ] State management
+- [ ] Analytics
 
-## Learn More
+- [ ] Get HX Assets
+- [ ] Initial implementation for HX Stomp patches, 1 dsp, 8 blocks
+- [ ] Add default preset
+- [ ] Component: Effects Blocks
+- [ ] Component: Input/Output
+- [ ] Component: Path
+- [ ] Implementation for Helix patches, 2 dsp
+- [ ] Component: Arrow points Path 1A,1B to 2A,2B \*
+- [ ] Feature: Drag and drop files to window
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Feature: Show multiple presets \*
+- [ ] Preset Diff functionality \*
+- [ ] Component: Diff block highlight \*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] Pastebin: Copy/Paste blocks
+- [ ] Component: Pastebin Blocks
+- [ ] Component: Pastebin Effects Image
+- [ ] Pastebin Persistence, local storage
+- [ ] Pastebin Persistence, Accounts and saved data \*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] Feature: Tuner, connect audio interface to web app
+- [ ] Feature: set up audio, pitch detection
+- [ ] Component: Tuner
+- [ ] Enable/Disable Tuner
+- [ ] Show/Hide Tuner
