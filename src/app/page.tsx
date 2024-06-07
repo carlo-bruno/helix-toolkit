@@ -1,4 +1,4 @@
-import PresetViewer from "./components/Helix/PresetViewer";
+import PresetViewer from "@/components/Helix/PresetViewer";
 
 export default function Home() {
   return (
