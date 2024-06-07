@@ -18,32 +18,49 @@ I want to create a web app of tools that will help me create and update my Helix
 
 ## TODOs:
 
+#### UI, framework, utils
+
 - [x] Initial deploy, Vercel
 - [x] Design basic layout
 - [x] Component: Toolkit Sidebar
 - [ ] Revisit Component: Sidebar toggle switches
-- [ ] State management: Zustand
+- [ ] Revisit Component: Sidebar show/hide
+- [ ] State management: Setup Zustand
+- [ ] State: Preset
+- [ ] State: UI, toggle specific tools
 - [ ] Analytics
 
-- [ ] Get HX Assets
-- [ ] Initial implementation for HX Stomp patches, 1 dsp, 8 blocks
+#### Preset viewer
+
+- [x] Get HX Assets: catalog and category icons
+- [x] Initial implementation: File reader
+- [ ] Initial implementation: Show HX Stomp patches, 1 dsp, 8 blocks
 - [ ] Add default preset
 - [ ] Component: Effects Blocks
 - [ ] Component: Input/Output
 - [ ] Component: Path
 - [ ] Implementation for Helix patches, 2 dsp
 - [ ] Component: Arrow points Path 1A,1B to 2A,2B \*
-- [ ] Feature: Drag and drop files to window
+- [ ] Revisit: File upload
+- [ ] Feature: Drag and drop files to window \*
 
+#### Extending Preset viewer
+
+- [ ] Feature: Show footswitch configuration
 - [ ] Feature: Show multiple presets \*
 - [ ] Preset Diff functionality \*
 - [ ] Component: Diff block highlight \*
 
-- [ ] Pastebin: Copy/Paste blocks
+#### Pastebin
+
+- [ ] Get HX Assets: model icons
+- [ ] Feature: Pastebin, ability to Copy/Paste blocks
 - [ ] Component: Pastebin Blocks
 - [ ] Component: Pastebin Effects Image
 - [ ] Pastebin Persistence, local storage
 - [ ] Pastebin Persistence, Accounts and saved data \*
+
+#### Tuner
 
 - [ ] Feature: Tuner, connect audio interface to web app
 - [ ] Feature: set up audio, pitch detection

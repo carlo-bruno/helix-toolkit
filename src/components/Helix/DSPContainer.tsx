@@ -10,7 +10,7 @@
 
 export default function DSPContainer({ dsp }: any) {
   return (
-    <div className="h-[180px] bg-gray-400 border-2 border-gray-800 w-[896px]">
+    <div className="h-[180px] bg-gray-500 border-2 border-gray-800 w-[896px]">
       <h2>DSP Container</h2>
     </div>
   );
