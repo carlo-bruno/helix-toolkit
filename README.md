@@ -34,6 +34,7 @@ I want to create a web app of tools that will help me create and update my Helix
 
 - [x] Get HX Assets: catalog and category icons
 - [x] Initial implementation: File reader
+- [x] Preset Parser: get relevant data
 - [ ] Initial implementation: Show HX Stomp patches, 1 dsp, 8 blocks
 - [ ] Add default preset
 - [ ] Component: Effects Blocks
@@ -47,6 +48,7 @@ I want to create a web app of tools that will help me create and update my Helix
 #### Extending Preset viewer
 
 - [ ] Feature: Show footswitch configuration
+- [ ] Revisit Preset Parser
 - [ ] Feature: Show multiple presets \*
 - [ ] Preset Diff functionality \*
 - [ ] Component: Diff block highlight \*
