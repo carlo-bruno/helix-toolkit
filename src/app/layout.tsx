@@ -21,8 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${inter.className} flex flex-row`}>
-        <SideBar />
+      <body
+        className={` ${inter.className} flex flex-row`}
+        suppressHydrationWarning
+      >
+        {/* <SideBar /> */}
         {children}
       </body>
     </html>

@@ -25,8 +25,8 @@ I want to create a web app of tools that will help me create and update my Helix
 - [x] Component: Toolkit Sidebar
 - [ ] Revisit Component: Sidebar toggle switches
 - [ ] Revisit Component: Sidebar show/hide
-- [ ] State management: Setup Zustand
-- [ ] State: Preset
+- [x] State management: Setup Zustand
+- [x] State: Preset
 - [ ] State: UI, toggle specific tools
 - [ ] Analytics
 
