@@ -7,7 +7,7 @@ export default function DSPBlocks({ dsp }: any) {
   });
 
   return (
-    <div className="w-full h-full flex flex-row gap-1 justify-between">
+    <div className="w-full h-full grid grid-cols-10 grid-rows-2 justify-items-center items-center">
       {effectBlocks}
     </div>
   );
