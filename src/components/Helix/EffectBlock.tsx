@@ -10,19 +10,27 @@ export default function EffectBlock({ block }: any) {
 
   console.log("🔥 EffectBlock", { categoryShortName, color, image, modelName });
 
+  const column = block["@position"] + 2;
+  const row = block["@path"] + 1;
+
   return (
     <div
-      className="w-12 h-12 border-[3px] rounded-lg box-content overflow-hidden border-[#989898] flex justify-center items-center"
-      style={{ borderColor: color }}
+      className="flex flex-col justify-center items-center w-full h-full"
+      style={{ gridColumn: column, gridRow: row }}
     >
-      <Image
-        src={"/hx_assets/icons_category/" + image}
-        width={48}
-        height={48}
-        alt={categoryShortName}
-        // style={{ transform: "translateY(-3rem)" }}
-      />
-      {/* <span>{`${categoryShortName}`}</span> */}
+      <div
+        className="w-12 h-12 border-[3px] rounded-lg box-content overflow-hidden border-[#989898]"
+        style={{ borderColor: color }}
+      >
+        <Image
+          src={"/hx_assets/icons_category/" + image}
+          width={48}
+          height={48}
+          alt={categoryShortName}
+          // style={{ transform: "translateY(-3rem)" }} // TODO: add logic for Send/Return
+        />
+      </div>
+      <p className="text-xs mt-1">{`${categoryShortName}`}</p>
     </div>
   );
 }
