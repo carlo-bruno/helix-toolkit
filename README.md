@@ -28,6 +28,7 @@ I want to create a web app of tools that will help me create and update my Helix
 - [x] State management: Setup Zustand
 - [x] State: Preset
 - [ ] State: UI, toggle specific tools
+- [ ] Types
 - [ ] Analytics
 
 #### Preset viewer
@@ -37,10 +38,13 @@ I want to create a web app of tools that will help me create and update my Helix
 - [x] Preset Parser: get relevant data
 - [ ] Initial implementation: Show HX Stomp patches, 1 dsp, 8 blocks
 - [ ] Add default preset
-- [ ] Component: Effects Blocks
+- [x] Component: Effects Blocks
 - [ ] Component: Input/Output
-- [ ] Component: Path
+- [x] Component: Path
 - [ ] Implementation for Helix patches, 2 dsp
+- [ ] Design: Styles and Colors
+- [ ] Component: Show active Block
+- [ ] Component: Effects Block hover, quickview
 - [ ] Component: Arrow points Path 1A,1B to 2A,2B \*
 - [ ] Revisit: File upload
 - [ ] Feature: Drag and drop files to window \*

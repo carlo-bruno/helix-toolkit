@@ -13,13 +13,15 @@ export default function EffectBlock({ block }: any) {
   const column = block["@position"] + 2;
   const row = block["@path"] + 1;
 
+  // TODO: show active/inactive
+
   return (
     <div
-      className="flex flex-col justify-center items-center w-full h-full"
+      className="flex flex-col justify-center items-center w-full h-full z-10"
       style={{ gridColumn: column, gridRow: row }}
     >
       <div
-        className="w-12 h-12 border-[3px] rounded-lg box-content overflow-hidden border-[#989898]"
+        className="w-12 h-12 border-[3px] rounded-lg box-content overflow-hidden border-[#989898] bg-[#989898]"
         style={{ borderColor: color }}
       >
         <Image
