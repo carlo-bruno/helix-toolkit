@@ -44,7 +44,7 @@ const getBlocksFromDSP = (dsp: any): ParsedDSP => {
   return { blocks, inputA, inputB, outputA, outputB, split, join };
 };
 
-export const getEffectCategory = (searchId: string): ParsedEffectBlock | null => {
+export const getEffectCategory = (searchId: string): ParsedEffectBlock => {
   // TODO: find a better way than nested loops
 
   for (const category of hxModelCatalog.categories) {
@@ -66,7 +66,7 @@ export const getEffectCategory = (searchId: string): ParsedEffectBlock | null =>
       }
     }
   }
-  return null; // TODO: return default block props
+  return {} as ParsedEffectBlock; // TODO: return default block props
 };
 
 interface ParsedEffectBlock {
