@@ -1,4 +1,5 @@
 import { type Preset } from "@/store/presetStore";
+import hxModelCatalog from "../../public/hx_assets/HX_ModelCatalog.json";
 
 export const parseHlxFile = (file: File): Promise<Preset> => {
   const reader = new FileReader();
@@ -42,6 +43,42 @@ const getBlocksFromDSP = (dsp: any): ParsedDSP => {
 
   return { blocks, inputA, inputB, outputA, outputB, split, join };
 };
+
+export const getEffectCategory = (searchId: string): ParsedEffectBlock | null => {
+  // TODO: find a better way than nested loops
+
+  for (const category of hxModelCatalog.categories) {
+    if (!category.subcategories) continue;
+
+    for (const subcategory of category.subcategories) {
+      const model = subcategory.models.find((model: any) => model.id === searchId);
+      if (model) {
+        return {
+          categoryName: category.name,
+          categoryShortName: category.shortName,
+          color: `#${category.color.substring(2)}`, // remove 0x
+          image: category.image.replace(/_%3/g, ""), // quickfix for send/return
+          //@ts-ignore
+          modelName: model.name,
+          //@ts-ignore
+          params: model.params,
+        };
+      }
+    }
+  }
+  return null; // TODO: return default block props
+};
+
+interface ParsedEffectBlock {
+  categoryName: string;
+  categoryShortName: string;
+  color: string;
+  image: string;
+  modelName: string;
+  params: any;
+}
+
+
 
 // TODO: move types
 interface ParsedDSP {
