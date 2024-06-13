@@ -2,13 +2,11 @@ import { getEffectCategory } from "@/utils/utils";
 import Image from "next/image";
 
 export default function EffectBlock({ block }: any) {
-  console.log("🔥 EffectBlock", block);
-
   const { categoryShortName, color, image, modelName } = getEffectCategory(
     block["@model"],
   );
 
-  console.log("🔥 EffectBlock", { categoryShortName, color, image, modelName });
+  // console.log("🔥 EffectBlock", { categoryShortName, color, image, modelName });
 
   const column = block["@position"] + 2;
   const row = block["@path"] + 1;
@@ -21,7 +19,7 @@ export default function EffectBlock({ block }: any) {
       style={{ gridColumn: column, gridRow: row }}
     >
       <div
-        className="w-12 h-12 border-[3px] rounded-lg box-content overflow-hidden border-[#989898] bg-[#989898]"
+        className="w-10 h-10 border-[3px] rounded-lg box-content overflow-hidden border-[#989898] bg-gray-900"
         style={{ borderColor: color }}
       >
         <Image

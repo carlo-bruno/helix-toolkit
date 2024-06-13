@@ -40,7 +40,7 @@ export default function DSPPath({ dsp }: any) {
         {/* Path A */}
         <path
           stroke="#989898"
-          strokeWidth="2.5"
+          strokeWidth="2"
           d={`
               M${START_X} ${TOP_Y}
               L${END_X} ${TOP_Y}
@@ -50,7 +50,7 @@ export default function DSPPath({ dsp }: any) {
         {hasSplit && hasPathB && (
           <path
             stroke="#989898"
-            strokeWidth="2.5"
+            strokeWidth="2"
             fill="none"
             d={`
                 M${66 + splitStart_X - 7} ${TOP_Y}
@@ -80,7 +80,7 @@ export default function DSPPath({ dsp }: any) {
         {hasPathB && hasJoin && (
           <path
             stroke="#989898"
-            strokeWidth="2.5"
+            strokeWidth="2"
             fill="none"
             d={`
                 M${66 + joinStart_X + 7} ${TOP_Y}
@@ -108,7 +108,7 @@ export default function DSPPath({ dsp }: any) {
         {hasPathB && (
           <path
             stroke="#989898"
-            strokeWidth="2.5"
+            strokeWidth="2"
             d={`
               M${pathB_start_X + (hasSplit ? 19 : 0)} ${BOTTOM_Y}
               L${pathB_end_X - (hasJoin ? 19 : 0)} ${BOTTOM_Y}
