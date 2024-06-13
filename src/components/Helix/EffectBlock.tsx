@@ -2,6 +2,8 @@ import { getEffectCategory } from "@/utils/utils";
 import Image from "next/image";
 
 export default function EffectBlock({ block }: any) {
+  console.log("🔥 EffectBlock", block);
+
   const { categoryShortName, color, image, modelName } = getEffectCategory(
     block["@model"],
   );
@@ -10,16 +12,15 @@ export default function EffectBlock({ block }: any) {
 
   const column = block["@position"] + 2;
   const row = block["@path"] + 1;
-
-  // TODO: show active/inactive
+  const opacity = block["@enabled"] ? 1 : 0.5;
 
   return (
     <div
       className="flex flex-col justify-center items-center w-full h-full z-10"
-      style={{ gridColumn: column, gridRow: row }}
+      style={{ gridColumn: column, gridRow: row, opacity }}
     >
       <div
-        className="w-10 h-10 border-[3px] rounded-lg box-content overflow-hidden border-[#989898] bg-gray-900"
+        className="w-10 h-10 border-[3px] rounded-lg box-content overflow-hidden border-[#989898] bg-black"
         style={{ borderColor: color }}
       >
         <Image

@@ -13,7 +13,7 @@ import DSPPath from "./DSPPath";
 
 export default function DSPContainer({ dsp }: any) {
   return (
-    <div className="w-[896px] h-[180px] bg-gray-900  relative">
+    <div className="w-[896px] h-[180px] bg-black  relative">
       <DSPBlocks dsp={dsp} />
       <DSPPath dsp={dsp} />
     </div>
