@@ -1,9 +1,9 @@
 import EffectBlock from "./EffectBlock";
-import InputBlock from "./InputBlock";
+import IOBlock from "./IOBlock";
 
 // Same width as Path
 export default function DSPBlocks({ dsp }: any) {
-  // console.log("🔥 DSPBlocks", dsp);
+  console.log("🔥 DSPBlocks", dsp);
 
   let effectBlocks = dsp?.blocks?.map((block: any, index: number) => {
     return <EffectBlock block={block} key={index} />;
@@ -11,11 +11,17 @@ export default function DSPBlocks({ dsp }: any) {
 
   return (
     <div className="w-full h-full grid grid-cols-10 grid-rows-2 justify-items-center items-center z-10">
-      <InputBlock block={dsp?.inputA} />
+      <IOBlock block={dsp?.inputA} />
       {dsp?.inputB["@input"] ? (
-        <InputBlock block={dsp?.inputB} isInputB />
+        <IOBlock block={dsp?.inputB} type={"inputB"} />
       ) : null}
+
       {effectBlocks}
+
+      <IOBlock block={dsp?.outputA} type={"outputA"} />
+      {dsp?.outputB["@output"] ? (
+        <IOBlock block={dsp?.outputB} type={"outputB"} />
+      ) : null}
     </div>
   );
 }

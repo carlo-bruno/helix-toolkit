@@ -2,7 +2,7 @@ import { getEffectCategory } from "@/utils/utils";
 import Image from "next/image";
 
 export default function EffectBlock({ block }: any) {
-  console.log("🔥 EffectBlock", block);
+  // console.log("🔥 EffectBlock", block);
 
   const { categoryShortName, color, image, modelName } = getEffectCategory(
     block["@model"],
