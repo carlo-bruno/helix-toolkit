@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist, createJSONStorage } from 'zustand/middleware';
 
 export interface Preset {
   presetName: string;
@@ -11,8 +12,14 @@ interface PresetState {
 }
 
 export const usePresetStore = create<PresetState>()(
-  (set) => ({
-    preset: {} as Preset,
-    setPreset: (preset: Preset) => set(() => ({ preset })),
-  })
+  persist(
+    (set) => ({
+      preset: {} as Preset,
+      setPreset: (preset: Preset) => set(() => ({ preset })),
+    }),
+    {
+      name: 'preset-store',
+      storage: createJSONStorage(() => localStorage),
+    }
+  )
 );

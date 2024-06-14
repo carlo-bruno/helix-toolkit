@@ -19,7 +19,7 @@ export default function DSPBlocks({ dsp }: any) {
       {effectBlocks}
 
       <IOBlock block={dsp?.outputA} type={"outputA"} />
-      {dsp?.outputB["@output"] ? (
+      {dsp?.outputB["@output"] && dsp?.topology.includes("B") ? (
         <IOBlock block={dsp?.outputB} type={"outputB"} />
       ) : null}
     </div>
