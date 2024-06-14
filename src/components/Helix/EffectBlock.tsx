@@ -24,7 +24,7 @@ export default function EffectBlock({ block }: any) {
         style={{ borderColor: color }}
       >
         <Image
-          src={"/hx_assets/icons_category/" + image}
+          src={"/hx_assets/icons_category/" + encodeURIComponent(image)}
           width={48}
           height={48}
           alt={categoryShortName}

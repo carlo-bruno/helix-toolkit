@@ -57,7 +57,7 @@ export const getEffectCategory = (searchId: string): ParsedEffectBlock => {
           categoryName: category.name,
           categoryShortName: category.shortName,
           color: `#${category.color.substring(2)}`, // remove 0x
-          image: category.image.replace(/_%3/g, ""), // quickfix for send/return
+          image: category.image,
           //@ts-ignore
           modelName: model.name,
           //@ts-ignore
@@ -69,9 +69,35 @@ export const getEffectCategory = (searchId: string): ParsedEffectBlock => {
   return {} as ParsedEffectBlock; // TODO: return default block props
 };
 
+export const getIOBlockData = (searchId: string): ParsedIOBlock => {
+  for (const category of [hxModelCatalog.categories[17], hxModelCatalog.categories[18]]) {
+    const model = category.models?.find((model: any) => model.id === searchId);
+    if (model) {
+      return {
+        // categoryName: category.name,
+        // categoryShortName: category.shortName,
+        color: `#${category.color.substring(2)}`, // remove 0x
+        image: model.image,
+        //@ts-ignore
+        modelName: model.name,
+        //@ts-ignore
+        params: model.params,
+      };
+    }
+  }
+  return {} as ParsedIOBlock;
+};
+
 interface ParsedEffectBlock {
   categoryName: string;
   categoryShortName: string;
+  color: string;
+  image: string;
+  modelName: string;
+  params: any;
+}
+
+interface ParsedIOBlock {
   color: string;
   image: string;
   modelName: string;

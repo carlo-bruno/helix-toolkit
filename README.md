@@ -39,7 +39,7 @@ I want to create a web app of tools that will help me create and update my Helix
 - [ ] Initial implementation: Show HX Stomp patches, 1 dsp, 8 blocks
 - [ ] Add default preset
 - [x] Component: Effects Blocks
-- [ ] Component: Input/Output
+- [x] Component: Input/Output
 - [x] Component: Path
 - [ ] Component: Split/Join indicators
 - [ ] Implementation for Helix patches, 2 dsp
