@@ -22,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${inter.className} flex flex-row`}
+        className={` ${inter.className} flex flex-row relative pl-12`}
         suppressHydrationWarning
       >
-        {/* <SideBar /> */}
+        <SideBar />
         {children}
       </body>
     </html>
